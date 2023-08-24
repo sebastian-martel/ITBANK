@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pagos - RAWRBank</title>
+    <link rel="stylesheet" href="../sidebar/styleSidebar.css">
+    <link rel="stylesheet" href="stylePagos.css">
+</head>
+<body>
+    <section class="sidebar">
+        <div class="wrapper">
+
+            <header>
+                <h1>RAWR</h1>
+                <p>logo</p>
+            </header>
+            
+            <nav>
+            <ul>
+                <li><a href="">Cuentas</a></li>
+                <li><a href="">Transferencias</a></li>
+                <li><a href="" class="bold">Pagos</a></li>
+                <li><a href="">Prestamos</a></li>
+                <li><a href="">Convertidor de moneda</a></li>
+            </ul>
+        </nav>
+        
+        <footer>
+            <a href="">Contacto</a>
+            <a href="">Cerrar sesión</a>
+        </footer>
+        
+    </div>
+    </section>
+
+    <main>
+        <h2>Pagos</h2>
+
+        <div class="cuentaSelect">
+            <h3>Cuenta origen:</h3>
+            <select name="Cuentas" id="selectCuentas">
+                <option value="caja1">Caja de ahorro N°123</option>
+                <option value="caja2">Cuenta Corriente N°321</option>
+            </select>
+        </div>
+
+        <section class="facturas">
+            <div>
+                <h3>Facturas a pagar:</h3>
+                <form id="facturasForm" name="facturasForm" action="GET">
+                    <label><input type="checkbox" name="facturasForm" value="1"> Factura 1 <span>$1</span></label>
+                    <label><input type="checkbox" name="facturasForm" value="2"> Factura 2 <span>$2</span></label>
+                    <label><input type="checkbox" name="facturasForm" value="3"> Factura 3 <span>$3</span></label>
+                    <label><input type="checkbox" name="facturasForm" value="4"> Factura 4 <span>$4</span></label>
+                </form>
+            </div>
+
+            <div class="facturasDetails">
+                <h4>factura1</h4>
+                <span>Nombre de la empresa</span>
+                <span>$1</span>
+                <span class="deleteButton">Eliminar</span>
+            </div>
+        </section>
+
+
+        <section class="checkout">
+            <div class="totalSuma">
+                <h3>Total:</h3>
+                <span class="facturasDetail">sumaFacturasSeleccionadas</span>
+            </div>
+            <div class="selectedAccountDetail">
+                <h3>Pagará desde:</h3><span>cuentaSeleccionada</span>
+            </div>
+            
+            <div class="pagarButton">
+                <span class="errorMessage hidden">Error en el pago</span>
+                <span class="successMessage hidden">¡Pagaste con éxito!</span>
+                <span type="button">Pagar</span>
+            </div>
+        </section>
+        </main>
+</body>
+</html>
