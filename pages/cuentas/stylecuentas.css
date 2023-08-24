@@ -1,0 +1,86 @@
+@import url('https://fonts.cdnfonts.com/css/gotham-6');
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Gotham', sans-serif;
+}
+
+body{
+    background-color: #2A3240;
+    display: flex;
+    
+}
+
+div{
+
+    height: 300px;
+    padding-bottom: 50px;
+    padding-top: 50px;
+    padding-left: 100px;
+    padding-right: 100px;
+    margin: 50px auto;
+    border-radius: 5%;
+    display: flex;
+    flex-direction: column;
+    
+    
+}
+
+h2{
+    color: #00A6AB;
+}
+
+h3{
+    padding-top: 30px;
+}
+
+.caja-ahorro-1{
+    position:relative;
+    background-color: #f6f6f6;
+    align-content: flex-start;
+    flex-direction: column;
+
+
+
+}
+
+.caja-ahorro-2{
+    position: relative;
+    background-color: #f6f6f6;
+    flex-direction: column;
+
+
+    
+}
+
+#transferir{
+    padding: 15px 35px;
+    border-width: 3px;
+    margin-top: 20px;
+    border-radius: 20px;
+    border-color: #00A6AB;
+    margin-bottom: 10px;
+    align-items: flex-end;
+    
+    
+}
+
+#movimientos{
+    padding: 15px 35px;
+    border-width: 3px;
+    border-radius: 20px;
+    border-color: #00A6AB;
+    margin-bottom: 10px;
+    align-items: flex-end;
+}
+
+a {
+    text-decoration: none;
+    color: black;
+  }
+
+a:hover{
+    color: black;
+    }
