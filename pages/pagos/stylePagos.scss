@@ -47,7 +47,8 @@ h3 {
     select {
         width: 80%;
         font-size: 2rem;
-        border: 2px solid #00a6ab;
+        border: 3px solid #00a6ab;
+        border-radius: 10px;
     }
 }
 
@@ -56,9 +57,13 @@ h3 {
     justify-content: space-evenly;
     margin-bottom: 15vh;
 
+    div h3 {
+        font-size: 1rem;
+    }
+
     h3 {
         margin-bottom: 1.2rem;
-        font-size: 2rem;
+        font-size: 1.5rem;
     }
 
     form {
@@ -66,7 +71,6 @@ h3 {
         flex-direction: column;
         label {
             margin: 0.2rem;
-            font-size: large;
             span {
                 font-weight: bold;
             }
