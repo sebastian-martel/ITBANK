@@ -14,10 +14,6 @@ main {
     height: 85vh;
 
     border-radius: 40px;
-
-    h3 {
-        font-size: 1rem;
-    }
 }
 
 h2 {
@@ -29,44 +25,54 @@ h2 {
 
 h3 {
     font-weight: bold;
+    font-size: 2rem;
+    margin: 1rem 0 1rem;
+    font-weight: bold;
+    text-align: center;
+    font-size: 2rem;
 }
 
-.cuentaSelect {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-
-    margin-bottom: 15vh;
-
-    h3 {
-        font-weight: bold;
-        font-size: 2rem;
-        margin: 1rem 0 1rem;
-    }
-
-    select {
-        width: 80%;
-        font-size: 2rem;
-        border: 2px solid #00a6ab;
-    }
+select {
+    height: 3rem;
+    border-radius: 10px;
+    font-size: 2rem;
+    border: 2px solid #00a6ab;
 }
 
 .facturas {
     display: flex;
+    flex-direction: column;
+    align-items: center;
     justify-content: space-evenly;
     margin-bottom: 15vh;
-
-    h3 {
-        margin-bottom: 1.2rem;
-        font-size: 2rem;
-    }
 
     form {
         display: flex;
         flex-direction: column;
+
+        margin-bottom: 1rem;
+
         label {
-            margin: 0.2rem;
-            font-size: large;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+
+            margin: 1rem 0 1rem;
+            font-size: 1rem;
+            input[type="text"] {
+                width: 20rem;
+                height: 3rem;
+                border-radius: 10px;
+                font-size: 2rem;
+                border: 2px solid #00a6ab;
+            }
+            input[type="number"] {
+                width: 20rem;
+                height: 3rem;
+                border-radius: 10px;
+                font-size: 2rem;
+                border: 2px solid #00a6ab;
+            }
             span {
                 font-weight: bold;
             }
@@ -74,7 +80,13 @@ h3 {
     }
 }
 
-.facturasDetails {
+form[name="terminosYCondiciones"] {
+    label {
+        display: inline;
+    }
+}
+
+.prestamoDetails {
     background-color: lightgray;
     padding: 1rem;
     border-radius: 10px;

@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pagos - RAWRBank</title>
+    <link rel="stylesheet" href="../sidebar/styleSidebar.css">
+    <link rel="stylesheet" href="stylePrestamos.css">
+</head>
+<body>
+    <section class="sidebar">
+        <div class="wrapper">
+
+            <header>
+                <h1>RAWR</h1>
+                <p>logo</p>
+            </header>
+            
+            <nav>
+            <ul>
+                <li><a href="../cuentas/Cuentas.html">Cuentas</a></li>
+                <li><a href="../transferencia/transferencia.html">Transferencias</a></li>
+                <li><a href="../pagos/pagos.html">Pagos</a></li>
+                <li><a href="" class="bold">Prestamos</a></li>
+                <li><a href="">Convertidor de moneda</a></li>
+            </ul>
+        </nav>
+        
+        <footer>
+            <a href="">Contacto</a>
+            <a href="">Cerrar sesión</a>
+        </footer>
+        
+    </div>
+    </section>
+
+    <main>
+        <h2>Prestamos</h2>
+
+        <h3>Podés pedir hasta: $num</h3>
+
+        <section class="facturas">
+            <div>
+                <h3>Solicitar nuevo préstamo</h3>
+                <form id="prestamosForm" name="prestamosForm" action="GET">
+                    <select title="selectCuenta" name="prestamosForm" id="prestamosSelect">
+                        <option value="cuenta1">Caja de ahorro N°123</option>
+                    </select>
+                    <label>Importe<input type="number"min=100000 max=1000000 required name="prestamosForm"></label>
+                    <label>Motivo:<input type="text" required name="prestamosForm"></label>
+                    <label>Cantidad de cuotas:<input type="number" max=24 required name="prestamosForm"></label>
+                </form>
+            </div>
+
+            <div class="prestamoDetails">
+                <h4>Vas a pagar:</h4>
+                <span>$1 (formula)</span>
+                <form action="" name="terminosYCondiciones" method="post">
+                   <label><input type="checkbox" name="terminosYCondiciones" required id="">Acepto los términos y condiciones</label>
+                    <button type="submit">Pagar</button>
+                </form>
+            </div>
+        </section>
+
+
+        </section>
+        </main>
+</body>
+</html>

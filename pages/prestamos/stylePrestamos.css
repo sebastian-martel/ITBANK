@@ -12,9 +12,6 @@ main {
   height: 85vh;
   border-radius: 40px;
 }
-main h3 {
-  font-size: 1rem;
-}
 
 h2 {
   text-align: center;
@@ -25,47 +22,62 @@ h2 {
 
 h3 {
   font-weight: bold;
-}
-
-.cuentaSelect {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  margin-bottom: 15vh;
-}
-.cuentaSelect h3 {
-  font-weight: bold;
   font-size: 2rem;
   margin: 1rem 0 1rem;
+  font-weight: bold;
+  text-align: center;
+  font-size: 2rem;
 }
-.cuentaSelect select {
-  width: 80%;
+
+select {
+  height: 3rem;
+  border-radius: 10px;
   font-size: 2rem;
   border: 2px solid #00a6ab;
 }
 
 .facturas {
   display: flex;
+  flex-direction: column;
+  align-items: center;
   justify-content: space-evenly;
   margin-bottom: 15vh;
-}
-.facturas h3 {
-  margin-bottom: 1.2rem;
-  font-size: 2rem;
 }
 .facturas form {
   display: flex;
   flex-direction: column;
+  margin-bottom: 1rem;
 }
 .facturas form label {
-  margin: 0.2rem;
-  font-size: large;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: 1rem 0 1rem;
+  font-size: 1rem;
+}
+.facturas form label input[type=text] {
+  width: 20rem;
+  height: 3rem;
+  border-radius: 10px;
+  font-size: 2rem;
+  border: 2px solid #00a6ab;
+}
+.facturas form label input[type=number] {
+  width: 20rem;
+  height: 3rem;
+  border-radius: 10px;
+  font-size: 2rem;
+  border: 2px solid #00a6ab;
 }
 .facturas form label span {
   font-weight: bold;
 }
 
-.facturasDetails {
+form[name=terminosYCondiciones] label {
+  display: inline;
+}
+
+.prestamoDetails {
   background-color: lightgray;
   padding: 1rem;
   border-radius: 10px;
@@ -75,22 +87,22 @@ h3 {
   width: 35%;
   height: 8rem;
 }
-.facturasDetails h4 {
+.prestamoDetails h4 {
   font-size: 1em;
   font-weight: bold;
   margin-bottom: 1rem;
 }
-.facturasDetails span {
+.prestamoDetails span {
   display: block;
   margin: 0.5rem;
 }
-.facturasDetails .deleteButton {
+.prestamoDetails .deleteButton {
   color: red;
   font-weight: bold;
   text-align: center;
   cursor: pointer;
 }
-.facturasDetails .deleteButton:hover {
+.prestamoDetails .deleteButton:hover {
   text-decoration: underline;
 }
 
@@ -132,4 +144,4 @@ h3 {
 
 .errorMessage {
   color: red;
-}/*# sourceMappingURL=stylePagos.css.map */
+}/*# sourceMappingURL=stylePrestamos.css.map */
