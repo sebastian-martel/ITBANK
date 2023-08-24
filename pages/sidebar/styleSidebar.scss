@@ -23,6 +23,10 @@
 }
 //end fonts
 
+.bold {
+    font-weight: bold;
+}
+
 a {
     text-decoration: none;
     color: black;
@@ -34,7 +38,7 @@ a {
 .sidebar {
     height: 95vh;
     margin-top: 2.5vh;
-    max-width: 15rem;
+    width: 16rem;
     border-radius: 0px 40px 40px 0px;
     border: 1px black solid;
     background-color: #ffff;
@@ -64,7 +68,8 @@ a {
                 list-style: none;
                 margin: 2rem 0 2rem 0;
                 a {
-                    font-size: 12;
+                    display: block;
+                    width: 90%;
                     transition: 500ms;
                     &:hover {
                         padding: 10px 5px;
