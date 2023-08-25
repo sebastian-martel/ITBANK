@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pagos - RAWRBank</title>
+    <link rel="stylesheet" href="../styles/style.css">
+</head>
+<body>
+
+    <section class="sidebar">
+        <div class="wrapper">
+
+            <header>
+                <h1>RAWR</h1>
+                <p>logo</p>
+            </header>
+            
+            <nav>
+            <ul>
+                <li><a href="cuentas.html">Cuentas</a></li>
+                <li><a href="transferencia.html">Transferencias</a></li>
+                <li class="currentPage"><a href="pagos.html">Pagos</a></li>
+                <li><a href="prestamos.html">Prestamos</a></li>
+                <li><a href="">Convertidor de moneda</a></li>
+            </ul>
+        </nav>
+        
+        <footer>
+            <a href="">Contacto</a>
+            <a href="">Cerrar sesión</a>
+        </footer>
+        
+    </div>
+    </section>
+
+    <main class="pagosMain">
+        <h2>Pagos</h2>
+
+        <div class="cuentaSelect">
+            <h3>Cuenta origen:</h3>
+            <select name="Cuentas" id="selectCuentas">
+                <option value="caja1">Caja de ahorro N°123</option>
+                <option value="caja2">Cuenta Corriente N°321</option>
+            </select>
+        </div>
+
+        <section>
+        <h3>Facturas a pagar:</h3>
+        <div class="facturasWrapper">
+
+            <form class="facturasResume" name="facturasForm" action="GET">
+                <label><input type="checkbox" name="facturasForm" value="1"> Factura 1 <span>$1</span> (i)</label>
+                <label><input type="checkbox" name="facturasForm" value="2"> Factura 2 <span>$2</span> (i)</label>
+                <label><input type="checkbox" name="facturasForm" value="3"> Factura 3 <span>$3</span> (i)</label>
+                <label><input type="checkbox" name="facturasForm" value="4"> Factura 4 <span>$4</span> (i)</label>
+            </form>
+            
+            <section class="facturasDetails">
+        <dl>
+            <div class="billName">
+                <dt>Nombre de la empresa:</dt>
+                <dd>Factura1</dd>
+            </div>
+
+            <div class="billDate">
+                <dt>Fecha de vencimiento:</dt>
+                <dd>17/2/2024</dd>
+            </div>
+
+            <div class="billType">
+                <dt>Servicio declarado:</dt>
+                <dd>Electricidad</dd>
+            </div>
+
+            <div class="facturasPrice">
+                <dt>Precio:</dt>
+                <dd>$1</dd>
+            </div>
+        </dl>
+
+        <span>Eliminar</span>
+            </section>
+        </section>
+        </div>
+    </section>
+
+
+        <section class="checkout">
+            <div class="totalSuma">
+                <h3>Total:</h3><span>sumaFacturasSeleccionadas</span>
+            </div>
+            <div class="cuentaDetail">
+                <h3>Pagará desde:</h3><span>cuentaSeleccionada</span>
+            </div>
+            
+            <div class="pagarButton">
+                <span class="errorMessage hidden">Error en el pago</span>
+                <span class="successMessage hidden">¡Pagaste con éxito!</span>
+                <button type="submit">Pagar</button>
+            </div>
+        </section>
+        </main>
+</body>
+</html>

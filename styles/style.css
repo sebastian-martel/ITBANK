@@ -1,0 +1,309 @@
+@charset "UTF-8";
+:root {
+  --main-background-color: #2a3240;
+  --main-white: #f6f6f6;
+  --main-lightblue: #00a6ab;
+  --menu-lightgray: #ededed;
+  --footer-gray: #dbdbdb;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Gotham", sans-serif;
+}
+
+body {
+  display: flex;
+  background-color: var(--main-background-color);
+}
+
+main {
+  position: relative;
+  margin: auto auto;
+  background-color: var(--main-white);
+  display: flex;
+  flex-flow: column nowrap;
+  padding: 2rem;
+  border-radius: 15px;
+  border: 4px solid var(--footer-gray);
+}
+
+h1 {
+  text-align: center;
+  font-size: 2.7rem;
+  color: #00a6ab;
+  align-self: center;
+}
+
+h2 {
+  text-align: center;
+  font-size: 2.7rem;
+  color: #00a6ab;
+  margin-bottom: 1rem;
+}
+
+h3 {
+  font-weight: bold;
+  text-align: center;
+  font-size: 2rem;
+}
+
+a {
+  text-decoration: none;
+  color: black;
+}
+
+.hidden {
+  display: none;
+}
+
+/* Sidebar */
+.sidebar {
+  height: 95vh;
+  margin-top: 2.5vh;
+  width: 16rem;
+  border-radius: 0px 40px 40px 0px;
+  background-color: var(--main-white);
+  border: 3px solid var(--footer-gray);
+  /* wrapper para ubicar mejor el contenido dentro del sidebar */
+}
+.sidebar img {
+  width: 5rem;
+  background-color: gray;
+  border-radius: 50%;
+}
+.sidebar .currentPage {
+  padding: 10px;
+  background-color: var(--footer-gray);
+  pointer-events: none;
+}
+.sidebar .wrapper {
+  height: inherit;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+.sidebar .wrapper header {
+  display: flex;
+  margin: 1.5rem 0 1.5rem;
+  justify-content: center;
+}
+.sidebar .wrapper header h1 {
+  color: #00a6ab;
+  font-weight: bold;
+  margin-right: 0.5rem;
+}
+.sidebar .wrapper nav {
+  position: relative;
+  top: -3rem;
+}
+.sidebar .wrapper nav ul li {
+  list-style: none;
+  margin: 2rem 0 2rem 0;
+  text-align: center;
+}
+.sidebar .wrapper nav ul li a {
+  display: block;
+  transition: 500ms;
+  /*Esto marca la página actual*/
+}
+.sidebar .wrapper nav ul li:hover {
+  transition: 500ms;
+  transform: translateY(0px);
+  padding: 10px;
+  background-color: var(--menu-lightgray);
+  font-weight: 600;
+}
+
+footer {
+  /*Se empieza a romper a los 434px*/
+  position: relative;
+  bottom: 0;
+  display: flex;
+  justify-content: space-evenly;
+  padding: 1rem 0 1.5rem 0;
+  background-color: var(--footer-gray);
+  border-radius: 0px 0px 40px 0px;
+}
+
+/* Cuentas */
+.cuentasMain {
+  position: relative;
+  margin: auto auto;
+  background-color: var(--main-background-color);
+  border: none;
+}
+.cuentasMain .caja-ahorro {
+  background-color: var(--main-white);
+  border-radius: 20px;
+  border: 3px solid var(--footer-gray);
+  margin: 2rem 0 2rem;
+  padding: 3rem;
+  display: flex;
+  align-content: center;
+  flex-direction: column;
+}
+.cuentasMain .caja-ahorro h2 {
+  margin-bottom: 1rem;
+}
+.cuentasMain .caja-ahorro img {
+  width: 1.6rem;
+  cursor: pointer;
+}
+.cuentasMain .caja-ahorro button {
+  cursor: pointer;
+  margin: 1rem;
+  height: 2rem;
+  border: 2px solid var(--main-lightblue);
+  border-radius: 15px;
+}
+.cuentasMain .caja-ahorro button:hover {
+  background-color: var(--footer-gray);
+  font-weight: 600;
+}
+.cuentasMain .caja-ahorro button:active {
+  font-weight: 100;
+  background-color: var(--menu-lightgray);
+}
+.cuentasMain .caja-ahorro #transferir {
+  margin-top: 2rem;
+}
+
+/* Transferencias */
+.transferenciasMain {
+  background-color: var(--main-white);
+  display: flex;
+  flex-flow: column nowrap;
+  padding: 2rem;
+  border-radius: 15px;
+}
+.transferenciasMain form {
+  display: flex;
+  flex-flow: column nowrap;
+}
+.transferenciasMain form label {
+  margin: 2rem 0 0.2rem;
+  font-weight: bold;
+  text-align: center;
+}
+.transferenciasMain form select {
+  width: 30vw;
+  height: 2rem;
+  border: var(--main-lightblue) 2px solid;
+  border-radius: 10px;
+}
+.transferenciasMain form input {
+  width: 30vw;
+  height: 2rem;
+  border: var(--main-lightblue) 2px solid;
+}
+.transferenciasMain form button {
+  margin: 2rem auto -0.5rem;
+  height: 2rem;
+  width: 8rem;
+}
+
+/* Pagos */
+.pagosMain .cuentaSelect {
+  display: flex;
+  flex-flow: column nowrap;
+  margin-bottom: 1rem;
+}
+.pagosMain .cuentaSelect select {
+  font-size: 1.2rem;
+  text-align: center;
+}
+.pagosMain .facturasWrapper {
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: space-between;
+}
+.pagosMain .facturasWrapper .facturasResume,
+.pagosMain .facturasWrapper .facturasDetails {
+  display: flex;
+  flex-flow: column nowrap;
+  justify-content: center;
+  padding: 2rem;
+  margin: 1rem;
+}
+.pagosMain .facturasWrapper .facturasDetails {
+  align-items: center;
+  text-align: center;
+  background-color: var(--footer-gray);
+  border-radius: 20px;
+}
+.pagosMain .facturasWrapper .facturasDetails span {
+  color: red;
+  font-weight: bold;
+  cursor: pointer;
+}
+.pagosMain .facturasWrapper .facturasDetails span:hover {
+  text-decoration: underline;
+}
+.pagosMain .facturasWrapper dt {
+  font-weight: bold;
+}
+.pagosMain .facturasWrapper .facturasPrice {
+  display: flex;
+  justify-content: center;
+  margin: 1rem 0 1rem;
+}
+.pagosMain .facturasWrapper .facturasPrice dd {
+  margin-left: 1rem;
+}
+.pagosMain .totalSuma,
+.pagosMain .cuentaDetail {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.pagosMain .totalSuma span,
+.pagosMain .cuentaDetail span {
+  margin-left: 1rem;
+  font-size: 1.5rem;
+}
+.pagosMain .pagarButton {
+  display: flex;
+  flex-flow: column nowrap;
+  margin: 1rem;
+  text-align: center;
+}
+.pagosMain .pagarButton .errorMessage {
+  color: red;
+}
+.pagosMain .pagarButton .successMessage {
+  color: green;
+}
+.pagosMain .pagarButton button {
+  height: 2rem;
+  border-radius: 10px;
+  border: 2px solid var(--main-lightblue);
+  cursor: pointer;
+}
+.pagosMain .pagarButton button:active {
+  background-color: var(--footer-gray);
+  font-size: 80%;
+}
+
+/* Prestamos */
+.prestamosBody .cuentaSelect {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-bottom: 15vh;
+}
+.prestamosBody .cuentaSelect h3 {
+  font-weight: bold;
+  font-size: 2rem;
+  margin: 1rem 0 1rem;
+}
+.prestamosBody .cuentaSelect select {
+  width: 80%;
+  font-size: 2rem;
+  border: 3px solid #00a6ab;
+  border-radius: 10px;
+}
+
+/* and so on for the rest of your styles *//*# sourceMappingURL=style.css.map */
