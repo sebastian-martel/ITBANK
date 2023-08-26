@@ -34,21 +34,29 @@
     </div>
     </section>
 
-    <main>
+    <main class="prestamosMain">
         <h2>Prestamos</h2>
 
         <h3>Podés pedir hasta: $num</h3>
 
-        <section class="facturas">
-            <div>
-                <h3 class="solicitarPrestamoTitle">Solicitar nuevo préstamo</h3>
-                <form id="prestamosForm" action="GET">
-                    <select title="selectCuenta" name="prestamosForm" id="prestamosSelect">
+        <section>
+            <div class="nuevoPrestamo">
+                <h3>Solicitar nuevo préstamo</h3>
+                <form id="prestamosForm" class="prestamosForm" method="GET" action="your_processing_script_here">
+                    
+                    <label for="cuentaSelect">Cuenta que recibirá el prestamo:</label>
+                    <select title="selectCuenta" name="cuentaSelect" id="prestamosSelect">
                         <option value="cuenta1">Caja de ahorro N°123</option>
                     </select>
-                    <label>Importe<input type="number"min=100000 max=1000000 required name="prestamosForm"></label>
-                    <label>Motivo:<input type="text" required name="prestamosForm"></label>
-                    <label>Cantidad de cuotas:<input type="number" max=24 required name="prestamosForm"></label>
+                    <label for="importe">Importe:</label>
+                    <input type="number" min="100000" max="1000000" required name="importe" id="importe">
+                    
+                    <label for="motivo">Motivo:</label>
+                    <input type="text" required name="motivo" id="motivo">
+                    
+                    <label for="cuotas">Cantidad de cuotas:</label>
+                    <input type="number" min="1" max="24" required name="cuotas" id="cuotas">
+                    
                 </form>
             </div>
 

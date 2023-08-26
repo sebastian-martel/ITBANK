@@ -20,7 +20,7 @@ body {
   background-color: var(--main-background-color);
 }
 
-//global format for all main sections
+//all main sections
 main {
   position: relative;
   margin: auto auto;
@@ -55,6 +55,41 @@ h3 {
 a {
   text-decoration: none;
   color: black;
+}
+input[type="number"],
+input[type="text"] {
+  width: 30vw;
+  height: 2rem;
+  border: var(--main-lightblue) 2px solid;
+  border-radius: 10px;
+}
+
+button {
+  cursor: pointer;
+  margin: 1rem;
+
+  height: 2rem;
+  border: 2px solid var(--main-lightblue);
+  border-radius: 15px;
+
+  &:hover {
+    background-color: var(--footer-gray);
+    font-weight: 600;
+  }
+
+  &:active {
+    font-weight: 100;
+    background-color: var(--menu-lightgray);
+  }
+}
+
+select {
+  width: 30vw;
+  height: 2rem;
+  border: var(--main-lightblue) 2px solid;
+  border-radius: 10px;
+  font-size: 1.2rem;
+  text-align: center;
 }
 
 .hidden {
@@ -109,11 +144,10 @@ a {
         list-style: none;
         margin: 2rem 0 2rem 0;
         text-align: center;
+        transition: 500ms;
 
         a {
           display: block;
-          transition: 500ms;
-          /*Esto marca la página actual*/
         }
         &:hover {
           transition: 500ms;
@@ -121,7 +155,6 @@ a {
           padding: 10px;
 
           background-color: var(--menu-lightgray);
-          font-weight: 600;
         }
       }
     }
@@ -167,24 +200,6 @@ footer {
       cursor: pointer;
     }
 
-    button {
-      cursor: pointer;
-      margin: 1rem;
-
-      height: 2rem;
-      border: 2px solid var(--main-lightblue);
-      border-radius: 15px;
-
-      &:hover {
-        background-color: var(--footer-gray);
-        font-weight: 600;
-      }
-
-      &:active {
-        font-weight: 100;
-        background-color: var(--menu-lightgray);
-      }
-    }
     #transferir {
       margin-top: 2rem;
     }
@@ -209,19 +224,6 @@ footer {
       text-align: center;
     }
 
-    select {
-      width: 30vw;
-      height: 2rem;
-      border: var(--main-lightblue) 2px solid;
-      border-radius: 10px;
-    }
-
-    input {
-      width: 30vw;
-      height: 2rem;
-      border: var(--main-lightblue) 2px solid;
-    }
-
     button {
       margin: 2rem auto -0.5rem;
       height: 2rem;
@@ -236,10 +238,6 @@ footer {
     display: flex;
     flex-flow: column nowrap;
     margin-bottom: 1rem;
-    select {
-      font-size: 1.2rem;
-      text-align: center;
-    }
   }
 
   .facturasWrapper {
@@ -324,23 +322,38 @@ footer {
   }
 }
 /* Prestamos */
-.prestamosBody {
-  .cuentaSelect {
+.prestamosMain {
+  display: flex;
+  flex-flow: column nowrap;
+  padding: 3.5rem;
+
+  .nuevoPrestamo {
+    margin-top: 1.5rem;
+    .prestamosForm {
+      display: flex;
+      flex-flow: column nowrap;
+      align-items: center;
+      text-align: center;
+      label {
+        margin-top: 1rem;
+      }
+      button {
+        margin-top: 2rem;
+        width: 10rem;
+      }
+    }
+  }
+  .prestamoDetails {
+    margin-top: 1rem;
     display: flex;
-    flex-direction: column;
+    flex-flow: column nowrap;
     align-items: center;
-    margin-bottom: 15vh;
-  }
-  .cuentaSelect h3 {
-    font-weight: bold;
-    font-size: 2rem;
-    margin: 1rem 0 1rem;
-  }
-  .cuentaSelect select {
-    width: 80%;
-    font-size: 2rem;
-    border: 3px solid #00a6ab;
-    border-radius: 10px;
+    form {
+      margin-top: 1.5rem;
+      display: flex;
+      flex-direction: column;
+    }
   }
 }
-/* and so on for the rest of your styles */
+
+/* login screen */
