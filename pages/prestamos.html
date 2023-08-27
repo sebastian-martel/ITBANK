@@ -7,6 +7,7 @@
     <link rel="stylesheet" href="../styles/style.css">
 </head>
 <body>
+    <div class="bodyWrapper">
 
     <section class="sidebar">
         <div class="wrapper">
@@ -17,7 +18,7 @@
                 <img src="../assets/icons/bars-solid.svg" alt="Menú de Navegación" class="dropDownMenu">
             </header>
             
-            <nav>
+            <nav class="navigationMenu">
             <ul>
                 <li><a href="cuentas.html">Cuentas</a></li>
                 <li><a href="transferencia.html">Transferencias</a></li>
@@ -27,10 +28,6 @@
             </ul>
         </nav>
         
-        <footer>
-            <a href="">Contacto</a>
-            <a href="">Cerrar sesión</a>
-        </footer>
         
     </div>
     </section>
@@ -46,7 +43,7 @@
                 <form id="prestamosForm" class="prestamosForm" method="GET" action="your_processing_script_here">
                     
                     <label for="cuentaSelect">Cuenta que recibirá el prestamo:</label>
-                    <select title="selectCuenta" name="cuentaSelect" id="prestamosSelect">
+                    <select title="selectCuenta" name="cuentaSelect" id="cuentaSelect">
                         <option value="cuenta1">Caja de ahorro N°123</option>
                     </select>
                     <label for="importe">Importe:</label>
@@ -70,8 +67,15 @@
                 </form>
             </div>
         </section>
-
-
-        </main>
+    
+    </main>
+            
+</div>
+    <footer>
+        <a href="">Contacto</a>
+        <a href="">Cerrar sesión</a>
+    </footer>
 </body>
+
+<script src="../scripts/main.js"></script>
 </html>
