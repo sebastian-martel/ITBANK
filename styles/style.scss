@@ -43,6 +43,7 @@ h2 {
   text-align: center;
   font-size: 2.7rem;
   color: #00a6ab;
+  white-space: nowrap;
   margin-bottom: 1rem;
 }
 
@@ -111,6 +112,14 @@ select {
     background-color: gray;
     border-radius: 50%;
   }
+
+.dropDownMenu{
+  background-color: var(--main-white);
+  width: 2rem;
+  margin-left: 2rem;
+  border-radius: 0;
+  display: none;
+}
 
   .currentPage {
     padding: 10px;
@@ -357,3 +366,85 @@ footer {
 }
 
 /* login screen */
+
+/* Media Queries */
+@media (max-width: 840px) {
+  *{
+    flex-flow: column wrap;
+  }
+  
+  
+  body{
+    flex-flow: column nowrap;
+    overflow-x:hidden;
+  }
+  
+  div{
+    border-radius: 0;
+  }
+
+.sidebar{
+height: auto;
+width: 100%;
+margin-top: 0;
+border-radius: 0;
+
+header{
+  margin: 0;
+  flex-direction: row;
+  align-items: center;
+  .dropDownMenu{
+    display:block;
+  }
+}
+footer{
+border-radius: 0;
+align-items: center;
+}}
+
+main{
+  border-radius: 0;
+width: fill-available;
+
+  div{
+    align-items: center;
+  }
+  button, select{
+    width: fill-available;
+  }
+  input[type=number], input[type=text]{
+    width: fill-available;
+  }
+  h2{
+    white-space: normal;
+  }
+}
+
+
+
+//cuentas
+.cuentasMain{
+  .caja-ahorro{
+    margin: -2rem 0 0 -2rem;
+    width: 100vw;
+  border-radius: 0;
+
+  }
+}
+//transferencias
+.transferenciasMain{
+  border-radius: 0;
+  form{
+    align-items: center;
+  }
+}
+
+//pagos
+.pagosMain{
+  .facturasWrapper{
+    flex-direction: column;
+  }
+}
+
+
+}
