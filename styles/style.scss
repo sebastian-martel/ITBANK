@@ -16,10 +16,11 @@
 }
 
 body {
-  display: flex;
   background-color: var(--main-background-color);
 }
-
+.bodyWrapper{
+  display: flex;
+}
 //all main sections
 main {
   position: relative;
@@ -103,7 +104,7 @@ select {
   height: 95vh;
   margin-top: 2.5vh;
   width: 16rem;
-  border-radius: 0px 40px 40px 0px;
+  border-radius: 0px 40px 0px 0px;
   background-color: var(--main-white);
   border: 3px solid var(--footer-gray);
 
@@ -178,7 +179,6 @@ footer {
   justify-content: space-evenly;
   padding: 1rem 0 1.5rem 0;
   background-color: var(--footer-gray);
-  border-radius: 0px 0px 40px 0px;
 }
 
 /* Cuentas */
@@ -397,9 +397,16 @@ header{
     display:block;
   }
 }
+
+nav{
+  margin-top: 2rem;
+}
+
+}
 footer{
-border-radius: 0;
-align-items: center;
+  align-items: center;
+a{
+  margin: 1rem 0 0.5rem;
 }}
 
 main{
@@ -424,6 +431,8 @@ width: fill-available;
 
 //cuentas
 .cuentasMain{
+
+  margin-bottom:-2rem;
   .caja-ahorro{
     margin: -2rem 0 0 -2rem;
     width: 100vw;
@@ -436,7 +445,8 @@ width: fill-available;
   border-radius: 0;
   form{
     align-items: center;
-  }
+   
+    }
 }
 
 //pagos
@@ -444,6 +454,10 @@ width: fill-available;
   .facturasWrapper{
     flex-direction: column;
   }
+  
+  dt{
+    margin-top: 0.5rem;
+}
 }
 
 
