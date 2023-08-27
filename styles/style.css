@@ -1,4 +1,3 @@
-@charset "UTF-8";
 :root {
   --main-background-color: #2a3240;
   --main-white: #f6f6f6;
@@ -55,6 +54,39 @@ a {
   color: black;
 }
 
+input[type=number],
+input[type=text] {
+  width: 30vw;
+  height: 2rem;
+  border: var(--main-lightblue) 2px solid;
+  border-radius: 10px;
+}
+
+button {
+  cursor: pointer;
+  margin: 1rem;
+  height: 2rem;
+  border: 2px solid var(--main-lightblue);
+  border-radius: 15px;
+}
+button:hover {
+  background-color: var(--footer-gray);
+  font-weight: 600;
+}
+button:active {
+  font-weight: 100;
+  background-color: var(--menu-lightgray);
+}
+
+select {
+  width: 30vw;
+  height: 2rem;
+  border: var(--main-lightblue) 2px solid;
+  border-radius: 10px;
+  font-size: 1.2rem;
+  text-align: center;
+}
+
 .hidden {
   display: none;
 }
@@ -103,18 +135,16 @@ a {
   list-style: none;
   margin: 2rem 0 2rem 0;
   text-align: center;
+  transition: 500ms;
 }
 .sidebar .wrapper nav ul li a {
   display: block;
-  transition: 500ms;
-  /*Esto marca la página actual*/
 }
 .sidebar .wrapper nav ul li:hover {
   transition: 500ms;
   transform: translateY(0px);
   padding: 10px;
   background-color: var(--menu-lightgray);
-  font-weight: 600;
 }
 
 footer {
@@ -152,21 +182,6 @@ footer {
   width: 1.6rem;
   cursor: pointer;
 }
-.cuentasMain .caja-ahorro button {
-  cursor: pointer;
-  margin: 1rem;
-  height: 2rem;
-  border: 2px solid var(--main-lightblue);
-  border-radius: 15px;
-}
-.cuentasMain .caja-ahorro button:hover {
-  background-color: var(--footer-gray);
-  font-weight: 600;
-}
-.cuentasMain .caja-ahorro button:active {
-  font-weight: 100;
-  background-color: var(--menu-lightgray);
-}
 .cuentasMain .caja-ahorro #transferir {
   margin-top: 2rem;
 }
@@ -188,17 +203,6 @@ footer {
   font-weight: bold;
   text-align: center;
 }
-.transferenciasMain form select {
-  width: 30vw;
-  height: 2rem;
-  border: var(--main-lightblue) 2px solid;
-  border-radius: 10px;
-}
-.transferenciasMain form input {
-  width: 30vw;
-  height: 2rem;
-  border: var(--main-lightblue) 2px solid;
-}
 .transferenciasMain form button {
   margin: 2rem auto -0.5rem;
   height: 2rem;
@@ -210,10 +214,6 @@ footer {
   display: flex;
   flex-flow: column nowrap;
   margin-bottom: 1rem;
-}
-.pagosMain .cuentaSelect select {
-  font-size: 1.2rem;
-  text-align: center;
 }
 .pagosMain .facturasWrapper {
   display: flex;
@@ -288,22 +288,37 @@ footer {
 }
 
 /* Prestamos */
-.prestamosBody .cuentaSelect {
+.prestamosMain {
+  display: flex;
+  flex-flow: column nowrap;
+  padding: 3.5rem;
+}
+.prestamosMain .nuevoPrestamo {
+  margin-top: 1.5rem;
+}
+.prestamosMain .nuevoPrestamo .prestamosForm {
+  display: flex;
+  flex-flow: column nowrap;
+  align-items: center;
+  text-align: center;
+}
+.prestamosMain .nuevoPrestamo .prestamosForm label {
+  margin-top: 1rem;
+}
+.prestamosMain .nuevoPrestamo .prestamosForm button {
+  margin-top: 2rem;
+  width: 10rem;
+}
+.prestamosMain .prestamoDetails {
+  margin-top: 1rem;
+  display: flex;
+  flex-flow: column nowrap;
+  align-items: center;
+}
+.prestamosMain .prestamoDetails form {
+  margin-top: 1.5rem;
   display: flex;
   flex-direction: column;
-  align-items: center;
-  margin-bottom: 15vh;
-}
-.prestamosBody .cuentaSelect h3 {
-  font-weight: bold;
-  font-size: 2rem;
-  margin: 1rem 0 1rem;
-}
-.prestamosBody .cuentaSelect select {
-  width: 80%;
-  font-size: 2rem;
-  border: 3px solid #00a6ab;
-  border-radius: 10px;
 }
 
-/* and so on for the rest of your styles *//*# sourceMappingURL=style.css.map */
+/* login screen *//*# sourceMappingURL=style.css.map */
