@@ -17,7 +17,7 @@
                 <img src="../assets/icons/bars-solid.svg" alt="Menú de Navegación" class="dropDownMenu">
             </header>
             
-            <nav>
+            <nav class="navigationMenu">
             <ul>
                 <li><a href="cuentas.html">Cuentas</a></li>
                 <li><a href="transferencia.html">Transferencias</a></li>
@@ -26,11 +26,8 @@
                 <li><a href="">Convertidor de moneda</a></li>
             </ul>
         </nav>
-        
-        
-    </div>
+        </div>
     </section>
-
     <main class="pagosMain">
         <h2>Pagos</h2>
 
@@ -47,36 +44,32 @@
         <div class="facturasWrapper">
 
             <form class="facturasResume" name="facturasForm" action="GET">
-                <label><input type="checkbox" name="facturasForm" value="1"> Factura 1 <span>$1</span> (i)</label>
-                <label><input type="checkbox" name="facturasForm" value="2"> Factura 2 <span>$2</span> (i)</label>
-                <label><input type="checkbox" name="facturasForm" value="3"> Factura 3 <span>$3</span> (i)</label>
-                <label><input type="checkbox" name="facturasForm" value="4"> Factura 4 <span>$4</span> (i)</label>
+                
+               <div class="facturaOption">
+                <label>
+                    <input type="checkbox" name="facturasForm" value="1"> Edesur <span>$10</span></label> 
+                    <img src="../assets/icons/info.svg" alt="Información de factura" class="facturaInfo">
+            </div>
+            
+               <div class="facturaOption"><label>
+                <input type="checkbox" name="facturasForm" value="2"> AYSA <span>$15</span> </label>
+                <img src="../assets/icons/info.svg" alt="Información de factura" class="facturaInfo">
+            </div>
+
+               <div class="facturaOption">
+                <label><input type="checkbox" name="facturasForm" value="3"> Metrogas <span>$5</span> </label>
+                <img src="../assets/icons/info.svg" alt="Información de factura" class="facturaInfo">
+            </div>
+
+             <div class="facturaOption">
+                <label><input type="checkbox" name="facturasForm" value="4"> Speedy <span>$7</span> </label>
+                <img src="../assets/icons/info.svg" alt="Información de factura" class="facturaInfo">
+            </div>
+
             </form>
             
-            <section class="facturasDetails">
-        <dl>
-            <div class="billName">
-                <dt>Nombre de la empresa:</dt>
-                <dd>Factura1</dd>
-            </div>
-
-            <div class="billDate">
-                <dt>Fecha de vencimiento:</dt>
-                <dd>17/2/2024</dd>
-            </div>
-
-            <div class="billType">
-                <dt>Servicio declarado:</dt>
-                <dd>Electricidad</dd>
-            </div>
-
-            <div class="facturasPrice">
-                <dt>Precio:</dt>
-                <dd>$1</dd>
-            </div>
-        </dl>
-
-        <span>Eliminar</span>
+            <section class="facturasDetails hidden">
+       
             </section>
         </section>
         
@@ -85,10 +78,10 @@
 
         <section class="checkout">
             <div class="totalSuma">
-                <h3>Total:</h3><span>sumaFacturasSeleccionadas</span>
+                <h3>Total:</h3><span class="total">$0</span>
             </div>
             <div class="cuentaDetail">
-                <h3>Pagará desde:</h3><span>cuentaSeleccionada</span>
+                <h3>Pagará desde:</h3><span class="cuentaSeleccionada">Caja de ahorro N°123</span>
             </div>
             
             <div class="pagarButton">
@@ -105,4 +98,5 @@
     </footer>
     </body>
 
+<script src="../scripts/main.js"></script>
 </html>
