@@ -5,7 +5,11 @@ const facturaOptions = document.querySelectorAll(".facturaOption");
 const facturaInfo = document.querySelectorAll(".facturaInfo");
 const selectCuentas = document.getElementById("selectCuentas");
 const pagaraDesde = document.querySelector(".cuentaSeleccionada");
-const totalDisplay = document.querySelector(".total")
+const totalDisplay = document.querySelector(".total");
+const eyeOpen = document.querySelectorAll(".eyeOpen");
+const eyeClosed = document.querySelectorAll(".eyeClosed");
+const saldo = document.querySelectorAll(".saldo");
+const eyeButtons = document.querySelectorAll(".eyes")
 
 
 //toggle para el nav
@@ -25,7 +29,28 @@ checkViewportWidth();
 window.addEventListener("resize", checkViewportWidth); //TO DO: investigar debouncer o throttler
 
 //cuentas
-let cuenta1 = 100;
+
+eyeButtons.forEach((eyeButton, index) => {
+    eyeButton.addEventListener("click", function() {
+        hidePlata(index);
+    });
+});
+
+
+function hidePlata(index){
+    if (!eyeOpen[index].classList.contains("hidden")){
+        eyeOpen[index].classList.add("hidden")
+        eyeClosed[index].classList.remove("hidden")
+        saldo[index].innerHTML = `Saldo: ***`
+    }else{
+        eyeOpen[index].classList.remove("hidden")
+        eyeClosed[index].classList.add("hidden")
+        saldo[index].innerHTML = `Saldo: $0`
+    };
+}
+
+
+
 
 //pagos
 facturaOptions.forEach((facturaOption, index) => {
@@ -138,6 +163,5 @@ selectCuentas.addEventListener('change', function() {
     pagaraDesde.innerHTML = cuentaSeleccionada.innerText;
 });
 
-
-
 //prestamos
+
