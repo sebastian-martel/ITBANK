@@ -6,10 +6,7 @@ const facturaInfo = document.querySelectorAll(".facturaInfo");
 const selectCuentas = document.getElementById("selectCuentas");
 const pagaraDesde = document.querySelector(".cuentaSeleccionada");
 const totalDisplay = document.querySelector(".total");
-const eyeOpen = document.querySelectorAll(".eyeOpen");
-const eyeClosed = document.querySelectorAll(".eyeClosed");
-const saldo = document.querySelectorAll(".saldo");
-const eyeButtons = document.querySelectorAll(".eyes")
+const eyeButtons = document.querySelectorAll(".eyeOpen")
 const cuentaSelectPrestamos = document.getElementById("selectCuentas");
 const importePrestamo = document.getElementById("importe");
 const cuotasPrestamo = document.getElementById("cuotas");
@@ -33,23 +30,21 @@ window.addEventListener("resize", checkViewportWidth); //TO DO: investigar debou
 
 //cuentas
 
-eyeButtons.forEach((eyeButton, index) => {
-    eyeButton.addEventListener("click", function () {
-        hidePlata(index);
-    });
+eyeButtons.forEach(eyeButton => {
+    eyeButton.addEventListener("click", hidePlata);
 });
 
+function hidePlata(event) {
+    const eyeButton = event.target;
+    const saldo = eyeButton.previousElementSibling;
 
-function hidePlata(index) {
-    if (!eyeOpen[index].classList.contains("hidden")) {
-        eyeOpen[index].classList.add("hidden")
-        eyeClosed[index].classList.remove("hidden")
-        saldo[index].innerHTML = `Saldo: ***`
+    if (!eyeButton.src.includes("closed")) {
+        eyeButton.src = "../assets/icons/eye-closed.svg";
+        saldo.textContent = `Saldo: ***`;
     } else {
-        eyeOpen[index].classList.remove("hidden")
-        eyeClosed[index].classList.add("hidden")
-        saldo[index].innerHTML = `Saldo: $0`
-    };
+        eyeButton.src = "../assets/icons/eye.svg";
+        saldo.textContent = `Saldo: $0`;
+    }
 }
 
 
@@ -160,11 +155,11 @@ facturaOptions.forEach((checkbox, index) => {
     });
 });
 
-selectCuentas.addEventListener('change', function () {
+/* selectCuentas.addEventListener('change', function () {
     cuentaSeleccionada = selectCuentas.options[selectCuentas.selectedIndex];
     console.log(cuentaSeleccionada.innerText);
     pagaraDesde.innerHTML = cuentaSeleccionada.innerText;
-});
+}); */
 
 //prestamos
 importePrestamo.addEventListener('input', updatePrestamoPreview);

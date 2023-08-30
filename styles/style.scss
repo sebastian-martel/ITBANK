@@ -60,7 +60,7 @@ a {
 }
 input[type="number"],
 input[type="text"] {
-  width: 30vw;
+  width: -webkit-fill-available;
   height: 2rem;
   border: var(--main-lightblue) 2px solid;
   border-radius: 10px;
@@ -87,7 +87,7 @@ button {
 }
 
 select {
-  width: 30vw;
+  width: -webkit-fill-available;
   height: 2rem;
   border: var(--main-lightblue) 2px solid;
   border-radius: 10px;
@@ -201,13 +201,18 @@ footer {
     align-content: center;
     flex-direction: column;
 
-    h2 {
-      margin-bottom: 1rem;
-    }
-
-    img {
-      width: 1.6rem;
-      cursor: pointer;
+    .saldoWrapper {
+      display: flex;
+      flex-direction: row;
+      justify-content: center;
+      img {
+        width: 1.6rem;
+        margin-left: 0.5rem;
+        cursor: pointer;
+      }
+      h2 {
+        margin-bottom: 1rem;
+      }
     }
 
     #transferir {
@@ -435,12 +440,12 @@ footer {
     }
     button,
     select {
-      width: fill-available;
+      width: -webkit-fill-available;
     }
 
     input[type="number"],
     input[type="text"] {
-      width: fill-available;
+      width: -webkit-fill-available;
     }
     h2 {
       white-space: normal;
