@@ -18,7 +18,7 @@
 body {
   background-color: var(--main-background-color);
 }
-.bodyWrapper{
+.bodyWrapper {
   display: flex;
 }
 //all main sections
@@ -64,6 +64,7 @@ input[type="text"] {
   height: 2rem;
   border: var(--main-lightblue) 2px solid;
   border-radius: 10px;
+  text-align: center;
 }
 
 button {
@@ -101,7 +102,7 @@ select {
 /* Sidebar */
 
 .sidebar {
-  height: 95vh;
+  height: inherit;
   margin-top: 2.5vh;
   width: 16rem;
   border-radius: 0px 40px 0px 0px;
@@ -114,13 +115,13 @@ select {
     border-radius: 50%;
   }
 
-.dropDownMenu{
-  background-color: var(--main-white);
-  width: 2rem;
-  margin-left: 2rem;
-  border-radius: 0;
-  display: none;
-}
+  .dropDownMenu {
+    background-color: var(--main-white);
+    width: 2rem;
+    margin-left: 2rem;
+    border-radius: 0;
+    display: none;
+  }
 
   .currentPage {
     padding: 10px;
@@ -243,10 +244,17 @@ footer {
 
 /* Pagos */
 .pagosMain {
+  margin: 1rem auto 1rem;
+
   .cuentaSelect {
     display: flex;
     flex-flow: column nowrap;
     margin-bottom: 1rem;
+  }
+
+  img {
+    max-width: 1rem;
+    cursor: pointer;
   }
 
   .facturasWrapper {
@@ -331,10 +339,20 @@ footer {
   }
 }
 /* Prestamos */
+
+.sidebar.sidebarPrestamos {
+  height: inherit;
+}
+.prestamosBody {
+  display: flex;
+  flex-direction: column;
+}
+
 .prestamosMain {
   display: flex;
   flex-flow: column nowrap;
   padding: 3.5rem;
+  margin: 1rem auto 1rem;
 
   .nuevoPrestamo {
     margin-top: 1.5rem;
@@ -369,96 +387,91 @@ footer {
 
 /* Media Queries */
 @media (max-width: 840px) {
-  *{
+  * {
     flex-flow: column wrap;
   }
-  
-  
-  body{
+
+  body {
     flex-flow: column nowrap;
-    overflow-x:hidden;
+    overflow-x: hidden;
   }
-  
-  div{
+
+  div {
     border-radius: 0;
   }
 
-.sidebar{
-height: auto;
-width: 100%;
-margin-top: 0;
-border-radius: 0;
+  .sidebar {
+    height: auto;
+    width: 100%;
+    margin-top: 0;
+    border-radius: 0;
 
-header{
-  margin: 0;
-  flex-direction: row;
-  align-items: center;
-  .dropDownMenu{
-    display:block;
-  }
-}
-
-nav{
-  margin-top: 2rem;
-}
-
-}
-footer{
-  align-items: center;
-a{
-  margin: 1rem 0 0.5rem;
-}}
-
-main{
-  border-radius: 0;
-width: fill-available;
-
-  div{
-    align-items: center;
-  }
-  button, select{
-    width: fill-available;
-  }
-  input[type=number], input[type=text]{
-    width: fill-available;
-  }
-  h2{
-    white-space: normal;
-  }
-}
-
-
-
-//cuentas
-.cuentasMain{
-
-  margin-bottom:-2rem;
-  .caja-ahorro{
-    margin: -2rem 0 0 -2rem;
-    width: 100vw;
-  border-radius: 0;
-
-  }
-}
-//transferencias
-.transferenciasMain{
-  border-radius: 0;
-  form{
-    align-items: center;
-   
+    header {
+      margin: 0;
+      flex-direction: row;
+      align-items: center;
+      .dropDownMenu {
+        display: block;
+      }
     }
-}
 
-//pagos
-.pagosMain{
-  .facturasWrapper{
-    flex-direction: column;
+    nav {
+      margin-top: 2rem;
+    }
   }
-  
-  dt{
-    margin-top: 0.5rem;
-}
-}
+  footer {
+    align-items: center;
+    a {
+      margin: 1rem 0 0.5rem;
+    }
+  }
 
+  main {
+    border-radius: 0;
+    width: fill-available;
 
+    div {
+      align-items: center;
+    }
+    button,
+    select {
+      width: fill-available;
+    }
+
+    input[type="number"],
+    input[type="text"] {
+      width: fill-available;
+    }
+    h2 {
+      white-space: normal;
+    }
+  }
+
+  //cuentas
+  .cuentasMain {
+    margin-bottom: -2rem;
+    .caja-ahorro {
+      margin: -2rem 0 0 -2rem;
+      width: 100vw;
+      border-radius: 0;
+    }
+  }
+  //transferencias
+  .transferenciasMain {
+    border-radius: 0;
+    form {
+      align-items: center;
+    }
+  }
+
+  //pagos
+  .pagosMain {
+    .facturasWrapper {
+      flex-direction: column;
+    }
+
+    dt {
+      margin-top: 0.5rem;
+    }
+  }
 }

@@ -14,8 +14,11 @@
 }
 
 body {
-  display: flex;
   background-color: var(--main-background-color);
+}
+
+.bodyWrapper {
+  display: flex;
 }
 
 main {
@@ -61,6 +64,7 @@ input[type=text] {
   height: 2rem;
   border: var(--main-lightblue) 2px solid;
   border-radius: 10px;
+  text-align: center;
 }
 
 button {
@@ -94,10 +98,10 @@ select {
 
 /* Sidebar */
 .sidebar {
-  height: 95vh;
+  height: inherit;
   margin-top: 2.5vh;
   width: 16rem;
-  border-radius: 0px 40px 40px 0px;
+  border-radius: 0px 40px 0px 0px;
   background-color: var(--main-white);
   border: 3px solid var(--footer-gray);
   /* wrapper para ubicar mejor el contenido dentro del sidebar */
@@ -163,7 +167,6 @@ footer {
   justify-content: space-evenly;
   padding: 1rem 0 1.5rem 0;
   background-color: var(--footer-gray);
-  border-radius: 0px 0px 40px 0px;
 }
 
 /* Cuentas */
@@ -218,10 +221,17 @@ footer {
 }
 
 /* Pagos */
+.pagosMain {
+  margin: 1rem auto 1rem;
+}
 .pagosMain .cuentaSelect {
   display: flex;
   flex-flow: column nowrap;
   margin-bottom: 1rem;
+}
+.pagosMain img {
+  max-width: 1rem;
+  cursor: pointer;
 }
 .pagosMain .facturasWrapper {
   display: flex;
@@ -296,10 +306,20 @@ footer {
 }
 
 /* Prestamos */
+.sidebar.sidebarPrestamos {
+  height: inherit;
+}
+
+.prestamosBody {
+  display: flex;
+  flex-direction: column;
+}
+
 .prestamosMain {
   display: flex;
   flex-flow: column nowrap;
   padding: 3.5rem;
+  margin: 1rem auto 1rem;
 }
 .prestamosMain .nuevoPrestamo {
   margin-top: 1.5rem;
@@ -356,9 +376,14 @@ footer {
   .sidebar header .dropDownMenu {
     display: block;
   }
-  .sidebar footer {
-    border-radius: 0;
+  .sidebar nav {
+    margin-top: 2rem;
+  }
+  footer {
     align-items: center;
+  }
+  footer a {
+    margin: 1rem 0 0.5rem;
   }
   main {
     border-radius: 0;
@@ -369,18 +394,23 @@ footer {
   main div {
     align-items: center;
   }
-  main button, main select {
+  main button,
+  main select {
     width: -webkit-fill-available;
     width: -moz-available;
     width: fill-available;
   }
-  main input[type=number], main input[type=text] {
+  main input[type=number],
+  main input[type=text] {
     width: -webkit-fill-available;
     width: -moz-available;
     width: fill-available;
   }
   main h2 {
     white-space: normal;
+  }
+  .cuentasMain {
+    margin-bottom: -2rem;
   }
   .cuentasMain .caja-ahorro {
     margin: -2rem 0 0 -2rem;
@@ -395,5 +425,8 @@ footer {
   }
   .pagosMain .facturasWrapper {
     flex-direction: column;
+  }
+  .pagosMain dt {
+    margin-top: 0.5rem;
   }
 }/*# sourceMappingURL=style.css.map */
