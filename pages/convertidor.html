@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../styles/style.css">
+    <title>convertidor</title>
+</head>
+<body>
+    <section class="sidebar">
+        <div class="wrapper">
+  
+            <header>
+                <h1>RAWR</h1>
+                <img src="../assets/icons/logo.png" alt="Logo">
+            </header>
+            
+        <nav>
+            <ul>
+                <li><a href="cuentas.html">Cuentas</a></li>
+                <li><a href="transferencia.html">Transferencias</a></li>
+                <li><a href="pagos.html">Pagos</a></li>
+                <li><a href="prestamos.html">Prestamos</a></li>
+                <li class="currentPage"><a href="convertidor.html">Convertidor de moneda</a></li>
+            </ul>
+        </nav>
+        
+        <footer>
+            <a href="contacto.html">Contacto</a>
+            <a href="">Cerrar sesión</a>
+        </footer>
+        
+    </div>
+    </section>
+<main class="convertidorMain">
+    <h1>Convertidor de moneda</h1>
+    <div id="converter">
+        <input type="number" id="amount" placeholder="Monto">
+        <select id="fromCurrency">
+          <option value="ars">Peso Argentino</option>
+          <option value="usd">Dólar USA</option>
+          <option value="eur">Euro</option>
+        </select>
+        <button id="swapCurrency">Cambiar Divisa</button>
+        <select id="toCurrency">
+          <option value="ars">Peso Argentino</option>
+          <option value="usd">Dólar USA</option>
+          <option value="eur">Euro</option>
+        </select>
+        <button id="convertButton">Convertir</button>
+        <div id="resultContainer">
+          <p id="result"></p>
+        </div>
+      </div>
+    
+      <script src="../script/script.js"></script>
+</main>
+</body>
+</html>
