@@ -4,7 +4,7 @@
   --main-white: #f6f6f6;
   --main-lightblue: #00a6ab;
   --menu-lightgray: #ededed;
-  --footer-gray: #dbdbdb;
+ 
 }
 
 * {
@@ -17,6 +17,19 @@
 body {
   display: flex;
   background-color: var(--main-background-color);
+}
+
+header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  padding: 15px;
+  background: var(--main-background-color);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  z-index: 99;
 }
 
 main {
@@ -53,6 +66,60 @@ h3 {
 a {
   text-decoration: none;
   color: black;
+}
+.image-logo {
+  margin-left: 5px;
+  margin-top: 5px;
+ 
+  
+}
+.nav-bar a {
+  position: relative;
+  font-size: 1.1em;
+  color:#f6f6f6;
+  text-decoration: none;
+  font-weight: 500;
+  margin-right: 40px;
+  padding-top:  5px;
+
+}
+.nav-bar a::after {
+  content: '';
+  position:absolute;
+  left: 0;
+  bottom: -6px;
+  width: 100%;
+  height: 3px;
+  background: #fff;
+  border-radius: 5px;
+  transform-origin: right;
+  transform: scaleX(0);
+  transition: transform .5s;
+}
+
+.nav-bar a:hover::after {
+  transform-origin: left;
+  transform: scaleX(1);
+}
+
+.nav-bar .btn-register { 
+  width: 140px;
+  height: 50px;
+  color: #f6f6f6;
+  background: transparent;
+  border: 2px solid   #00A6AB;
+  border-color: #00a6ab;
+  border-radius: 50px;
+  cursor: pointer;
+  font-size: 1.1em;
+  font-weight: 500;
+  margin-right:40px ;
+  transition: .5s
+}
+.nav-bar .btn-register:hover { 
+  background: #fff;
+  color: #0a989f;
+
 }
 
 .hidden {
@@ -306,4 +373,151 @@ footer {
   border-radius: 10px;
 }
 
-/* and so on for the rest of your styles *//*# sourceMappingURL=style.css.map */
+/* body */
+.login-body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  background: #2a3240;
+  background-size: cover;
+  background-position: center;
+  padding: 55px;
+ 
+}
+
+/* login screen */
+.login-main { 
+ margin: 0;
+ padding: 40px;
+ padding-top: 140px;
+ padding-bottom: 140px;
+}
+.login-main .nombre-del-banco {
+  width: 1100px;
+  height: 800px;
+  background: url();
+}
+.login-main .nombre-del-banco .Color1 {
+  color: #ffffff;
+  text-align: left;
+}
+.login-main .nombre-del-banco .Color2 {
+  color: #00A6AB;
+}
+.login-main .formulario {
+  width: 480px;
+  height: 410px;
+  background: transparent;
+  border: 2px solid;
+  border-color: #0a989f;
+  backdrop-filter: blur(28px);
+  box-shadow: 0 0 10px;
+  color: #00A6AB;
+  border-radius: 15px;
+  padding: 25px 35px;
+  position: relative;
+
+
+}
+.login-main .formulario h1 {
+  margin-top: 5px;
+  font-size: 36px;
+  text-align: center;
+}
+.login-main .formulario .input-box {
+  position: relative;
+  width: 100%;
+  height: 50px;
+  margin: 30px 0;
+}
+.login-main .input-box input {
+  width: 100%;
+  height: 100%;
+  background: transparent;
+  border-radius: 40px;
+  outline: none;
+  border-color: #00A6AB;
+  font-size: 16px;
+  color: #2a3240;
+  padding: 28px;
+}
+.login-main .input-box input::-moz-placeholder {
+  color: #2a3240;
+  text-align: center;
+}
+.login-main .input-box input::placeholder {
+  color: #2a3240;
+  text-align: center;
+}
+.login-main .input-box img {
+  position: absolute;
+  right: 15px;
+  top: 34%;
+}
+.login-main .formulario .forgot-password {
+  display: flex;
+  justify-content: space-between;
+  font-size: 14px;
+  margin: -15px 0 15px;
+  margin-top: 2px;
+}
+.login-main .forgot-password label input {
+  accent-color: #fff;
+  margin-right: 5px;
+}
+.login-main .forgot-password a {
+  color: #2a3240;
+  text-decoration: none;
+}
+.login-main .forgot-password a:hover {
+  text-decoration: underline;
+}
+.login-main .formulario .boton {
+  width: 100%;
+  height: 50px;
+  background: #00A6AB;
+  border: none;
+  outline: none;
+  border-radius: 40px;
+  box-shadow: 0 0 5px rgb(138, 138, 138);
+  cursor: pointer;
+  font-size: 16px;
+  color: #2a3240;
+  font-weight: 600;
+  margin-top: 5px;
+
+}
+.login-main .formulario .link-registro {
+  font-size: 14px;
+  margin: 12px 0 12px;
+  text-align: center;
+}
+.login-main .link-registro p a {
+  color: #2a3240;
+  text-decoration: none;
+  font-weight: 600;
+}
+.login-main .link-registro p a:hover {
+  text-decoration: underline;
+}/*# sourceMappingURL=style.css.map */
+
+.image-container { 
+  text-align: center;
+}
+.image {
+  width: 75vw;
+  max-width: 90%;
+  height: 680px;
+  object-fit: cover;
+  padding-right: 30px;
+  
+
+  
+
+
+ 
+
+  
+  
+}
