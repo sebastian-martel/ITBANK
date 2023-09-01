@@ -11,7 +11,8 @@ function validateLogin() {
     if (data.useremail === "pepe" && data.userpassword === "123") {
         window.location.href = "cuentas.html"
     } else {
-        alert("Usuario y/o contraseña incorrectos.")
+        alert("Usuario y/o contraseña incorrectos. (F12 para ver credenciales)")
+        console.log("Usuario: pepe - Contraseña: 123");
     }
 }
 boton.addEventListener('click', (e) => {
