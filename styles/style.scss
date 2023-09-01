@@ -20,6 +20,7 @@ body {
 }
 .bodyWrapper {
   display: flex;
+  min-height: 95vh;
 }
 //all main sections
 main {
@@ -281,6 +282,9 @@ footer {
       text-align: center;
       background-color: var(--footer-gray);
       border-radius: 20px;
+      &.hidden {
+        display: none;
+      }
 
       span {
         color: red;
@@ -441,11 +445,13 @@ footer {
     button,
     select {
       width: -webkit-fill-available;
+      text-align: center;
     }
 
     input[type="number"],
     input[type="text"] {
       width: -webkit-fill-available;
+      text-align: center;
     }
     h2 {
       white-space: normal;

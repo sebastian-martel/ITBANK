@@ -40,10 +40,12 @@ function hidePlata(event) {
 
     if (!eyeButton.src.includes("closed")) {
         eyeButton.src = "../assets/icons/eye-closed.svg";
+        eyeButton.alt = "Mostrar Saldo"
         saldo.textContent = `Saldo: ***`;
     } else {
         eyeButton.src = "../assets/icons/eye.svg";
         saldo.textContent = `Saldo: $0`;
+        eyeButton.alt = "Ocultar Saldo"
     }
 }
 
@@ -113,7 +115,6 @@ facturaOptions.forEach((facturaOption, index) => {
           <dd>$${precioFactura}</dd>
         </div>
       </dl>
-      <span>Eliminar</span>
     `;
 
 

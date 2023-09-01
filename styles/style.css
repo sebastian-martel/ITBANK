@@ -19,6 +19,7 @@ body {
 
 .bodyWrapper {
   display: flex;
+  min-height: 95vh;
 }
 
 main {
@@ -60,7 +61,7 @@ a {
 
 input[type=number],
 input[type=text] {
-  width: 30vw;
+  width: -webkit-fill-available;
   height: 2rem;
   border: var(--main-lightblue) 2px solid;
   border-radius: 10px;
@@ -84,7 +85,7 @@ button:active {
 }
 
 select {
-  width: 30vw;
+  width: -webkit-fill-available;
   height: 2rem;
   border: var(--main-lightblue) 2px solid;
   border-radius: 10px;
@@ -186,12 +187,18 @@ footer {
   align-content: center;
   flex-direction: column;
 }
-.cuentasMain .caja-ahorro h2 {
-  margin-bottom: 1rem;
+.cuentasMain .caja-ahorro .saldoWrapper {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
 }
-.cuentasMain .caja-ahorro img {
+.cuentasMain .caja-ahorro .saldoWrapper img {
   width: 1.6rem;
+  margin-left: 0.5rem;
   cursor: pointer;
+}
+.cuentasMain .caja-ahorro .saldoWrapper h2 {
+  margin-bottom: 1rem;
 }
 .cuentasMain .caja-ahorro #transferir {
   margin-top: 2rem;
@@ -251,6 +258,9 @@ footer {
   text-align: center;
   background-color: var(--footer-gray);
   border-radius: 20px;
+}
+.pagosMain .facturasWrapper .facturasDetails.hidden {
+  display: none;
 }
 .pagosMain .facturasWrapper .facturasDetails span {
   color: red;
@@ -397,14 +407,12 @@ footer {
   main button,
   main select {
     width: -webkit-fill-available;
-    width: -moz-available;
-    width: fill-available;
+    text-align: center;
   }
   main input[type=number],
   main input[type=text] {
     width: -webkit-fill-available;
-    width: -moz-available;
-    width: fill-available;
+    text-align: center;
   }
   main h2 {
     white-space: normal;
