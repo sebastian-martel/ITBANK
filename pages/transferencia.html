@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../styles/style.css">
+
+    <title>Nueva Transferencia - RAWRBank</title>
+</head>
+
+<body>
+    <div class="bodyWrapper">
+        <section class="sidebar">
+            <div class="wrapper">
+
+                <header>
+                    <h1>RAWR</h1>
+                    <img src="../assets/icons/logo.png" alt="Logo">
+                    <img src="../assets/icons/bars-solid.svg" alt="Menú de Navegación" class="dropDownMenu">
+                </header>
+
+                <nav>
+                    <ul>
+                        <li><a href="cuentas.html">Cuentas</a></li>
+                        <li class="currentPage"><a href="transferencia.html">Transferencias</a></li>
+                        <li><a href="pagos.html">Pagos</a></li>
+                        <li><a href="prestamos.html">Prestamos</a></li>
+                        <li><a href="">Convertidor de moneda</a></li>
+                    </ul>
+                </nav>
+
+
+            </div>
+        </section>
+
+        <main class="transferenciasMain">
+            <h1>Nueva Transferencia</h1>
+            <form>
+                <label for="opciones">Cuenta Origen:</label>
+                <select name="opciones" title="opciones">
+                    <option value="opcion1">Caja de ahorro N°123</option>
+                    <option value="opcion2">Cuenta Corriente N°321</option>
+
+                </select>
+
+                <label for="cuentaOrigen">Cuenta Destino:</label>
+                <select name="opciones" title="opciones">
+                    <option value="opcion1">Cuenta Corriente N°521</option>
+                    <option value="opcion2">Caja de ahorro N°233</option>
+
+                </select>
+
+                <label for="cuentaDestino">Motivo:</label>
+                <select id="opciones" name="cuentaDestino">
+                    <option value="opcion1">Expensas</option>
+                    <option value="opcion2">Alquiler</option>
+                    <option value="opcion3">Servicios</option>
+                    <option value="opcion3">Otro</option>
+                </select>
+
+                <label for="importe">Importe:</label>
+                <input type="number" name="importe" id="importe" placeholder="Importe de la transferencia">
+
+                <button type="submit" value="Enviar">Enviar</button>
+
+            </form>
+        </main>
+    </div>
+    <footer>
+        <a href="">Contacto</a>
+        <a href="">Cerrar sesión</a>
+    </footer>
+</body>
+
+</html>

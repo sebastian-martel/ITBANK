@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../styles/style.css">
+    <title>Cuentas</title>
+</head>
+
+<body>
+    <div class="bodyWrapper">
+        <section class="sidebar">
+            <div class="wrapper">
+
+                <header>
+                    <h1>RAWR</h1>
+                    <img src="../assets/icons/logo.png" alt="Logo">
+                    <img src="../assets/icons/bars-solid.svg" alt="Menú de Navegación" class="dropDownMenu">
+                </header>
+
+                <nav class="navigationMenu">
+                    <ul>
+                        <li class="currentPage"><a href="cuentas.html">Cuentas</a></li>
+                        <li><a href="transferencia.html">Transferencias</a></li>
+                        <li><a href="pagos.html">Pagos</a></li>
+                        <li><a href="prestamos.html">Prestamos</a></li>
+                        <li><a href="">Convertidor de moneda</a></li>
+                    </ul>
+                </nav>
+            </div>
+        </section>
+
+        <main class="cuentasMain">
+
+            <div class="caja-ahorro">
+                <h2>Caja de ahorro N° 123</h2>
+                <div class="saldoWrapper">
+                    <h3 class="saldo">Saldo: $0</h3>
+                    <img src="../assets/icons/eye.svg" alt="Ocultar Saldo" class="eyeOpen">
+                </div>
+
+                <button id="transferir"><a href="/transferencia/Nueva Transferencia.html">Transferir</a></button>
+                <button id="movimientos"><a href="#">Últimos movimientos</a></button>
+            </div>
+
+            <div class="caja-ahorro">
+                <h2>Caja de ahorro N° 321</h2>
+                <div class="saldoWrapper">
+                    <h3 class="saldo">Saldo: $0</h3>
+                    <img src="../assets/icons/eye.svg" alt="Ocultar Saldo" class="eyeOpen">
+                </div>
+
+                <button id="transferir"><a href="/transferencia/Nueva Transferencia.html">Transferir</a></button>
+                <button id="movimientos"><a href="#">Últimos movimientos</a></button>
+            </div>
+
+        </main>
+    </div>
+
+    <footer>
+        <a href="">Contacto</a>
+        <a href="">Cerrar sesión</a>
+    </footer>
+
+</body>
+
+
+<script src="../scripts/main.js"></script>
+
+</html>
