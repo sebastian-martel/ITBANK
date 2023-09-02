@@ -1,18 +1,17 @@
-// Se define un objeto que almacena tasas de conversión entre monedas.
+const swapCurrencyButton = document.getElementById("swapCurrency");
+const convertButton = document.getElementById("convertButton");
+const amountInput = document.getElementById("amount");
+const fromCurrencySelect = document.getElementById("fromCurrency");
+const toCurrencySelect = document.getElementById("toCurrency");
+const resultContainer = document.getElementById("resultContainer");
+const resultOutput = document.getElementById("result");
+
+  // Se define un objeto que almacena tasas de conversión entre monedas.
 const conversionRates = {
     ars: { usd: 0.0029, eur: 0.0026 },
     usd: { ars: 349.98, eur: 0.92 },
     eur: { ars: 379.48, usd: 1.08 },
   };
-
-// Se obtienen referencias a elementos del DOM mediante sus IDs.
-  const swapCurrencyButton = document.getElementById("swapCurrency");
-  const convertButton = document.getElementById("convertButton");
-  const amountInput = document.getElementById("amount");
-  const fromCurrencySelect = document.getElementById("fromCurrency");
-  const toCurrencySelect = document.getElementById("toCurrency");
-  const resultContainer = document.getElementById("resultContainer");
-  const resultOutput = document.getElementById("result");
 
 // Se agrega un evento 'click' al botón 'Convertir'.
   convertButton.addEventListener("click", () => {
