@@ -1,35 +1,57 @@
-const cantidadInput = document.getElementById('cantidad');
-const monedaInput = document.getElementById('monedas');
-const resultado = document.getElementById('resultado');
+// Se define un objeto que almacena tasas de conversión entre monedas.
+const conversionRates = {
+    ars: { usd: 0.0029, eur: 0.0026 },
+    usd: { ars: 349.98, eur: 0.92 },
+    eur: { ars: 379.48, usd: 1.08 },
+  };
 
-let conversion;
-let totalAConvertir;
-let monedaAConvertir = "Real"; //por si el usuario convierte sin modificar el select
+// Se obtienen referencias a elementos del DOM mediante sus IDs.
+  const swapCurrencyButton = document.getElementById("swapCurrency");
+  const convertButton = document.getElementById("convertButton");
+  const amountInput = document.getElementById("amount");
+  const fromCurrencySelect = document.getElementById("fromCurrency");
+  const toCurrencySelect = document.getElementById("toCurrency");
+  const resultContainer = document.getElementById("resultContainer");
+  const resultOutput = document.getElementById("result");
 
-cantidadInput.addEventListener("change", ()=>{
-totalAConvertir = cantidadInput.value
-})
+// Se agrega un evento 'click' al botón 'Convertir'.
+  convertButton.addEventListener("click", () => {
 
-monedaInput.addEventListener("change", ()=>{
-    monedaAConvertir = monedaInput.value
-    })
+// Se obtiene el monto ingresado por el usuario, las monedas de origen y destino seleccionadas.
+    const amount = parseFloat(amountInput.value);
+    const fromCurrency = fromCurrencySelect.value;
+    const toCurrency = toCurrencySelect.value;
 
-    function convertir() {
-
-        switch(monedaAConvertir) {
-            case 'Real':
-                conversion = totalAConvertir * 0.014;
-                break;
-            case 'Euro':
-                conversion = totalAConvertir * 0.0026;
-                break;
-            case 'Dolar':
-                conversion = totalAConvertir * 0.0028;
-                break;
-               default:
-                conversion = "Ingrese una moneda a convertir" 
-                
-                break;
-        }
-        resultado.innerHTML = `${conversion.toFixed(2)} ${monedaInput.value}s`;
+// Se verifica si el monto ingresado es un número válido.
+    if (isNaN(amount)) {
+      resultOutput.textContent = "Por favor ingresa un monto válido.";
+      resultContainer.style.display = "block";
+      return;
     }
+
+// Se verifica si las monedas de origen y destino son iguales.
+    if (fromCurrency === toCurrency) {
+      resultOutput.textContent = "Las monedas de origen y destino son iguales.";
+      resultContainer.style.display = "block";
+      return;
+    }
+
+// Se calcula la tasa de conversión y el monto convertido.
+    const conversionRate = conversionRates[fromCurrency][toCurrency];
+    const convertedAmount = (amount * conversionRate).toFixed(2);
+
+// Se muestra el resultado en el elemento de salida.
+    resultOutput.textContent = `${amount} ${fromCurrency.toUpperCase()} = ${convertedAmount} ${toCurrency.toUpperCase()}`;
+    resultContainer.style.display = "block";
+  });
+
+// Se agrega un evento 'click' al botón 'Cambiar Divisa'.
+  swapCurrencyButton.addEventListener("click", () => {
+
+// Se intercambian las monedas de origen y destino seleccionadas por el usuario.
+    const tempCurrency = fromCurrencySelect.value;
+    fromCurrencySelect.value = toCurrencySelect.value;
+    toCurrencySelect.value = tempCurrency;
+// Se oculta el contenedor de resultados.
+    resultContainer.style.display = "none";
+  });
