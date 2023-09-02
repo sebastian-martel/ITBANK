@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Convertidor de Monedas</title>
+<link rel="stylesheet" href="../styles/style.css">
+</head>
+
+<body class="convertidorBody">
+  <div class="bodyWrapper">
+
+  <section class="sidebar">
+    <div class="wrapper">
+
+        <header>
+            <h1>RAWR</h1>
+            <img src="../assets/icons/logo.png" alt="Logo">
+            <img src="../assets/icons/bars-solid.svg" alt="Menú de Navegación" class="dropDownMenu">
+        </header>
+
+        <nav class="navigationMenu">
+            <ul>
+                <li><a href="cuentas.html">Cuentas</a></li>
+                <li><a href="transferencia.html">Transferencias</a></li>
+                <li><a href="pagos.html">Pagos</a></li>
+                <li><a href="prestamos.html">Prestamos</a></li>
+                <li class="currentPage"><a href="">Convertidor de moneda</a></li>
+            </ul>
+        </nav>
+    </div>
+</section>
+
+    <main>
+      <h1>Convertidor de Monedas</h1>
+      <form>
+        <label for="cantidad">Cantidad (en pesos):</label>
+        <input type="text" id="cantidad" name="cantidad">
+        <label for="monedas">Elegir Moneda:</label>
+        <select id="monedas">
+          <option value="Peso">Peso</option>
+          <option value="Euro">Euro</option>
+          <option value="Dolar">Dolar</option>
+        </select>
+        <button type="button" onclick="convertir()">Convertir</button>
+      </form>
+      <p>La conversión es: <span id="resultado"></span></p>
+    </main>
+  </div>
+
+    <footer>
+      <a href="contacto.html">Contacto</a>
+    <a href="login.html">Cerrar sesión</a>
+  </footer>
+</body>
+
+
+<script src="../scripts/main.js"></script>
+<script src="../scripts/convertidor.js"></script>
+</html>
