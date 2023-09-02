@@ -328,13 +328,6 @@ footer {
     margin: 1rem;
     text-align: center;
 
-    .errorMessage {
-      color: red;
-    }
-    .successMessage {
-      color: green;
-    }
-
     button {
       height: 2rem;
       border-radius: 10px;
@@ -345,6 +338,11 @@ footer {
         font-size: 80%;
       }
     }
+  }
+
+  .checkout a{
+    text-decoration: underline;
+    font-weight: bold;
   }
 }
 /* Prestamos */
@@ -483,6 +481,47 @@ footer {
 
     dt {
       margin-top: 0.5rem;
+    }
+  }
+}
+
+
+//contacto
+.contactoBody{
+  display: flex;
+flex-direction: column;
+}
+.contactoMain{
+  text-align: center;
+  padding: 3rem;
+  .contact-item{
+    margin: 1rem 0 1rem;
+  }
+
+  p span{
+    font-weight: bold;
+  }
+}
+
+//convertidor
+.convertidorBody{
+  display: flex;
+  flex-direction: column;
+  main{
+    padding: 3rem;
+    text-align: center;
+    h1{
+      margin-bottom: 1rem;
+    }
+    input{
+      margin-bottom: 2rem;
+    }
+    select{
+      margin-bottom: 1rem;
+    }
+    button{
+      padding: 1rem;
+      text-align: center;
     }
   }
 }
