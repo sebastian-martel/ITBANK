@@ -503,7 +503,7 @@ flex-direction: column;
   }
 }
 
-//convertidor
+//  convertidor de moneda 
 .convertidorBody{
   display: flex;
   flex-direction: column;
@@ -523,5 +523,23 @@ flex-direction: column;
       padding: 1rem;
       text-align: center;
     }
+  }
+  .convertidorMain {
+
+    text-align: center;
+    font-family: "Gotham", sans-serif;
+  }
+  #converter {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 50vh;
+  }
+  #resultContainer {
+    margin-top: 20px;
+    display: none;
+    border: var(--main-lightblue) 2px solid;
+    border-radius: 10px;
   }
 }
