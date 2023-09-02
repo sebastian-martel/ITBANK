@@ -525,16 +525,14 @@ footer .redesSociales img {
   text-align: center;
   font-family: "Gotham", sans-serif;
 }
-.convertidorBody #converter {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  height: 50vh;
+.convertidorBody #amount {
+  max-width: 50%;
 }
-.convertidorBody #resultContainer {
-  margin-top: 20px;
-  display: none;
-  border: var(--main-lightblue) 2px solid;
-  border-radius: 10px;
+.convertidorBody #swapCurrency {
+  background-color: var(--main-white);
+  border: 0px;
+  margin-top: -1rem;
+}
+.convertidorBody #swapCurrency:hover {
+  background-color: var(--main-white);
 }/*# sourceMappingURL=style.css.map */

@@ -580,17 +580,16 @@ flex-direction: column;
     text-align: center;
     font-family: "Gotham", sans-serif;
   }
-  #converter {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    height: 50vh;
+
+  #amount{
+    max-width: 50%;
   }
-  #resultContainer {
-    margin-top: 20px;
-    display: none;
-    border: var(--main-lightblue) 2px solid;
-    border-radius: 10px;
+  #swapCurrency{
+    background-color: var(--main-white);
+    border: 0px;
+    margin-top: -1rem;
+    &:hover{
+      background-color: var(--main-white);
+    }
   }
 }
