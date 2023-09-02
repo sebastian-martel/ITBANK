@@ -298,12 +298,6 @@ footer {
   margin: 1rem;
   text-align: center;
 }
-.pagosMain .pagarButton .errorMessage {
-  color: red;
-}
-.pagosMain .pagarButton .successMessage {
-  color: green;
-}
 .pagosMain .pagarButton button {
   height: 2rem;
   border-radius: 10px;
@@ -313,6 +307,10 @@ footer {
 .pagosMain .pagarButton button:active {
   background-color: var(--footer-gray);
   font-size: 80%;
+}
+.pagosMain .checkout a {
+  text-decoration: underline;
+  font-weight: bold;
 }
 
 /* Prestamos */
@@ -437,4 +435,41 @@ footer {
   .pagosMain dt {
     margin-top: 0.5rem;
   }
+}
+.contactoBody {
+  display: flex;
+  flex-direction: column;
+}
+
+.contactoMain {
+  text-align: center;
+  padding: 3rem;
+}
+.contactoMain .contact-item {
+  margin: 1rem 0 1rem;
+}
+.contactoMain p span {
+  font-weight: bold;
+}
+
+.convertidorBody {
+  display: flex;
+  flex-direction: column;
+}
+.convertidorBody main {
+  padding: 3rem;
+  text-align: center;
+}
+.convertidorBody main h1 {
+  margin-bottom: 1rem;
+}
+.convertidorBody main input {
+  margin-bottom: 2rem;
+}
+.convertidorBody main select {
+  margin-bottom: 1rem;
+}
+.convertidorBody main button {
+  padding: 1rem;
+  text-align: center;
 }/*# sourceMappingURL=style.css.map */
