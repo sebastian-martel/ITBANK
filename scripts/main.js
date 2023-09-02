@@ -11,6 +11,27 @@ const cuentaSelectPrestamos = document.getElementById("selectCuentas");
 const importePrestamo = document.getElementById("importe");
 const cuotasPrestamo = document.getElementById("cuotas");
 const previewPrestamo = document.querySelector(".previewPrestamo");
+const useremail = document.getElementById('useremail');
+const userpassword = document.getElementById('userpassword');
+const loginButton = document.getElementById('loginButton');
+
+//login
+/* function validateLogin() {
+  const data = {
+      useremail: useremail.value,
+      userpassword: userpassword.value
+  }
+  if (data.useremail === "pepe" && data.userpassword === "123") {
+      window.location.href = "cuentas.html"
+  } else {
+      alert("Usuario y/o contraseña incorrectos. (F12 para ver credenciales)")
+      console.log("Usuario: pepe - Contraseña: 123");
+  }
+}
+loginButton.addEventListener('click', (e) => {
+  e.preventDefault()
+  validateLogin()
+}) */
 
 //toggle para el nav
 dropDownMenuButton.addEventListener("click", function () {
@@ -31,10 +52,11 @@ window.addEventListener("resize", checkViewportWidth); //TO DO: investigar debou
 //cuentas
 
 eyeButtons.forEach(eyeButton => {
-    eyeButton.addEventListener("click", hidePlata);
+    eyeButton.addEventListener("click", hideCash);
 });
 
-function hidePlata(event) {
+function hideCash(event) {
+
     const eyeButton = event.target;
     const saldo = eyeButton.previousElementSibling;
 
@@ -42,7 +64,7 @@ function hidePlata(event) {
         eyeButton.src = "../assets/icons/eye-closed.svg";
         eyeButton.alt = "Mostrar Saldo"
         saldo.textContent = `Saldo: ***`;
-    } else {
+      } else {
         eyeButton.src = "../assets/icons/eye.svg";
         saldo.textContent = `Saldo: $0`;
         eyeButton.alt = "Ocultar Saldo"
