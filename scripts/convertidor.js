@@ -4,7 +4,7 @@ const resultado = document.getElementById('resultado');
 
 let conversion;
 let totalAConvertir;
-let monedaAConvertir;
+let monedaAConvertir = "Real"; //por si el usuario convierte sin modificar el select
 
 cantidadInput.addEventListener("change", ()=>{
 totalAConvertir = cantidadInput.value
@@ -18,7 +18,7 @@ monedaInput.addEventListener("change", ()=>{
 
         switch(monedaAConvertir) {
             case 'Real':
-                conversion = totalAConvertir * 1;
+                conversion = totalAConvertir * 0.014;
                 break;
             case 'Euro':
                 conversion = totalAConvertir * 0.0026;
@@ -31,5 +31,5 @@ monedaInput.addEventListener("change", ()=>{
                 
                 break;
         }
-        resultado.innerHTML = `${conversion} ${monedaInput.value}s`;
+        resultado.innerHTML = `${conversion.toFixed(2)} ${monedaInput.value}s`;
     }
