@@ -188,7 +188,7 @@ align-items: center;
     text-align: center;
   }
   .register-form .genero { 
-    width: 440px;
+    width: 340px;
     height: 3rem;
     border-radius: 50px;
     border: 2px solid #00A6AB;
@@ -196,7 +196,7 @@ align-items: center;
     margin-top: 15px;
     font-size: 14px;
     cursor: pointer;
-    margin-left: 25px;
+    margin-left:60px;
     color: #2a3240;
   }
   .register-form .register-button {
