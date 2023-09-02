@@ -38,14 +38,15 @@ h1 {
   font-size: 2.7rem;
   color: #00a6ab;
   align-self: center;
+  white-space: nowrap;
+  margin-bottom: 1rem;
 }
 
 h2 {
   text-align: center;
   font-size: 2.7rem;
   color: #00a6ab;
-  white-space: nowrap;
-  margin-bottom: 1rem;
+  align-self: center;
 }
 
 h3 {
@@ -161,13 +162,26 @@ select {
 }
 
 footer {
-  /*Se empieza a romper a los 434px*/
   position: relative;
+  height: 3.5rem;
   bottom: 0;
   display: flex;
   justify-content: space-evenly;
   padding: 1rem 0 1.5rem 0;
   background-color: var(--footer-gray);
+}
+footer .redesSociales {
+  display: flex;
+  flex-flow: row nowrap;
+  height: 2rem;
+  width: 15rem;
+  justify-content: space-between;
+}
+footer .redesSociales img {
+  width: 2rem;
+  transition: 500ms;
+  transform: translateY(0px);
+  cursor: pointer;
 }
 
 /* Cuentas */
@@ -187,6 +201,18 @@ footer {
   align-content: center;
   flex-direction: column;
 }
+.cuentasMain .caja-ahorro .movimientosLink {
+  border: 2px solid var(--main-lightblue);
+  border-radius: 15px;
+  width: 415px;
+  margin: 0 16px 16px 16px;
+  text-align: center;
+  height: 1.7rem;
+}
+.cuentasMain .caja-ahorro .movimientosLink:hover {
+  background-color: var(--footer-gray);
+  font-weight: 600;
+}
 .cuentasMain .caja-ahorro .saldoWrapper {
   display: flex;
   flex-direction: row;
@@ -202,6 +228,28 @@ footer {
 }
 .cuentasMain .caja-ahorro #transferir {
   margin-top: 2rem;
+}
+
+/* Ultimos Movimientos */
+.ultimosMovimientosBody {
+  display: flex;
+  flex-direction: column;
+}
+.ultimosMovimientosBody ul {
+  list-style-type: none;
+  text-align: center;
+}
+.ultimosMovimientosBody ul li {
+  margin: 1rem 0 1rem;
+}
+.ultimosMovimientosBody ul span {
+  font-weight: bold;
+}
+.ultimosMovimientosBody ul .ingreso {
+  color: green;
+}
+.ultimosMovimientosBody ul .egreso {
+  color: red;
 }
 
 /* Transferencias */
