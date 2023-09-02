@@ -7,7 +7,7 @@ function hideCash(event) {
     const saldo = eyeButton.previousElementSibling;
 
     if (!eyeButton.src.includes("closed")) {
-        eyeButton.src = "../assets/icons/eye-closed.svg";
+        eyeButton.src = "../assets/icons/eye-closed.png";
         eyeButton.alt = "Mostrar Saldo"
         saldo.textContent = `Saldo: ***`;
       } else {
